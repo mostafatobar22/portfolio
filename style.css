@@ -144,19 +144,20 @@ section {
 .section-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: rgb(var(--teal));
 }
 
-.section-eyebrow .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
+.section-eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
   background: rgb(var(--teal));
-  animation: blink 2s ease-in-out infinite;
 }
 
 .section-heading {
@@ -481,6 +482,118 @@ section {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
+}
+
+/* ---------- Capability strip (Programming / AI / EV) ---------- */
+.capabilities {
+  position: relative;
+  margin-top: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.25rem 3rem;
+}
+
+.cap-line {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  top: 26px;
+  height: 1px;
+  background: linear-gradient(to right, rgb(var(--border-strong)), rgb(var(--border-strong)) 50%, rgb(var(--border-strong)));
+  z-index: 0;
+  display: none;
+}
+
+.cap-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.cap-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--border));
+  background: rgb(var(--bg-elevated));
+}
+
+.cap-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.cap-icon-code svg {
+  fill: none;
+  stroke: rgb(var(--teal));
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cap-cursor {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 14px;
+  background: rgb(var(--teal));
+  animation: blink 1.1s steps(1) infinite;
+}
+
+.cap-icon-ai svg .node {
+  fill: rgb(var(--teal));
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: node-pulse 2.6s ease-in-out infinite;
+}
+.cap-icon-ai svg .n2 { animation-delay: 0.35s; }
+.cap-icon-ai svg .n3 { animation-delay: 0.7s; }
+
+.cap-icon-ai svg .link {
+  stroke: rgb(var(--teal));
+  stroke-width: 1.5;
+  stroke-opacity: 0.45;
+  stroke-dasharray: 6 6;
+  animation: link-flow 3.5s linear infinite;
+}
+
+.cap-icon-ev svg rect,
+.cap-icon-ev svg path,
+.cap-icon-ev svg circle {
+  fill: none;
+  stroke: rgb(var(--amber));
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cap-icon-ev svg .bolt {
+  fill: rgb(var(--amber));
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: bolt-pulse 1.9s ease-in-out infinite;
+}
+
+.cap-label {
+  font-size: 0.88rem;
+  color: rgb(var(--fg-muted));
+}
+
+@media (min-width: 720px) {
+  .cap-line {
+    display: block;
+  }
 }
 
 /* ---------- Reveal-on-scroll ---------- */
@@ -1096,4 +1209,18 @@ section {
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-14px); }
+}
+
+@keyframes node-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.55; }
+}
+
+@keyframes link-flow {
+  to { stroke-dashoffset: -48; }
+}
+
+@keyframes bolt-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
