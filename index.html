@@ -37,6 +37,50 @@
     <symbol id="i-terminal" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></symbol>
   </svg>
 
+  <!-- ============ BACKGROUND TECH PATTERN (software / programming / AI / automotive / ECU motifs) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <pattern id="tech-pattern" width="260" height="260" patternUnits="userSpaceOnUse" patternTransform="rotate(6)">
+        <!-- code brackets: programming -->
+        <g transform="translate(18,26)" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="0 6 -8 14 0 22"></polyline>
+          <polyline points="18 6 26 14 18 22"></polyline>
+        </g>
+        <!-- circuit trace + solder points: software / firmware -->
+        <g transform="translate(148,16)" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M0 0 H24 V18 H42"></path>
+          <circle cx="42" cy="18" r="3" fill="currentColor" stroke="none"></circle>
+          <circle cx="0" cy="0" r="3" fill="currentColor" stroke="none"></circle>
+        </g>
+        <!-- neural network: AI -->
+        <g transform="translate(36,124)" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="11" y1="0" x2="0" y2="22"></line>
+          <line x1="11" y1="0" x2="22" y2="22"></line>
+          <line x1="0" y1="22" x2="22" y2="22"></line>
+          <circle cx="11" cy="0" r="2.6" fill="currentColor" stroke="none"></circle>
+          <circle cx="0" cy="22" r="2.6" fill="currentColor" stroke="none"></circle>
+          <circle cx="22" cy="22" r="2.6" fill="currentColor" stroke="none"></circle>
+        </g>
+        <!-- car silhouette: automotive -->
+        <g transform="translate(150,152)" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M0 14 H38 M4 14 L8 5 H28 L34 14"></path>
+          <circle cx="9" cy="16" r="3.2"></circle>
+          <circle cx="29" cy="16" r="3.2"></circle>
+        </g>
+        <!-- chip with pins: ECU -->
+        <g transform="translate(92,66)" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="0" y="0" width="24" height="24" rx="2"></rect>
+          <line x1="6" y1="0" x2="6" y2="-6"></line>
+          <line x1="12" y1="0" x2="12" y2="-6"></line>
+          <line x1="18" y1="0" x2="18" y2="-6"></line>
+          <line x1="6" y1="24" x2="6" y2="30"></line>
+          <line x1="12" y1="24" x2="12" y2="30"></line>
+          <line x1="18" y1="24" x2="18" y2="30"></line>
+        </g>
+      </pattern>
+    </defs>
+  </svg>
+
   <!-- ============ NAVBAR ============ -->
   <header class="navbar" id="navbar">
     <div class="container">
@@ -80,12 +124,17 @@
   <main>
     <!-- ============ HERO ============ -->
     <section id="home" class="hero">
+      <div class="section-decor" aria-hidden="true" style="--tone-a: var(--blue); --tone-b: var(--violet);">
+        <span class="decor-blob decor-blob-a"></span>
+        <span class="decor-blob decor-blob-b"></span>
+        <svg class="decor-pattern"><rect width="100%" height="100%" fill="url(#tech-pattern)"></rect></svg>
+      </div>
       <div class="hero-grid" aria-hidden="true"></div>
       <svg class="hero-trace" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0 150 L90 150 L90 70 L170 70 L170 170 L260 170 L260 50 L340 50 L340 130 L430 130 L430 90 L510 90 L510 160 L600 160 L600 60 L680 60 L680 120 L760 120 L760 80 L850 80 L850 150 L930 150 L930 100 L1010 100 L1010 140 L1090 140 L1090 70 L1200 70"
-          fill="none" stroke="rgb(47,214,196)" stroke-opacity="0.55" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+          fill="none" stroke="rgb(37,99,235)" stroke-opacity="0.45" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
         <path d="M0 110 C 100 50, 200 170, 300 110 S 500 50, 600 110 S 800 170, 900 110 S 1100 50, 1200 110"
-          fill="none" stroke="rgb(255,176,59)" stroke-opacity="0.28" stroke-width="1.5"></path>
+          fill="none" stroke="rgb(124,58,237)" stroke-opacity="0.3" stroke-width="1.5"></path>
       </svg>
 
       <div class="container hero-content">
@@ -156,6 +205,11 @@
 
     <!-- ============ ABOUT ============ -->
     <section id="about" class="section">
+      <div class="section-decor" aria-hidden="true" style="--tone-a: var(--violet); --tone-b: var(--teal);">
+        <span class="decor-blob decor-blob-a"></span>
+        <span class="decor-blob decor-blob-b"></span>
+        <svg class="decor-pattern"><rect width="100%" height="100%" fill="url(#tech-pattern)"></rect></svg>
+      </div>
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="section-eyebrow">About</span>
@@ -192,7 +246,7 @@
               </div>
               <div class="fact">
                 <dt>Current focus</dt>
-                <dd>Embedded Systems & AI Integration</dd>
+                <dd>Embedded Systems &amp; AI Integration</dd>
               </div>
               <div class="fact">
                 <dt>Languages</dt>
@@ -209,6 +263,11 @@
 
     <!-- ============ EXPERIENCE ============ -->
     <section id="experience" class="section">
+      <div class="section-decor" aria-hidden="true" style="--tone-a: var(--teal); --tone-b: var(--amber);">
+        <span class="decor-blob decor-blob-a"></span>
+        <span class="decor-blob decor-blob-b"></span>
+        <svg class="decor-pattern"><rect width="100%" height="100%" fill="url(#tech-pattern)"></rect></svg>
+      </div>
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="section-eyebrow">Experience</span>
@@ -337,6 +396,11 @@
 
     <!-- ============ PROJECTS ============ -->
     <section id="projects" class="section">
+      <div class="section-decor" aria-hidden="true" style="--tone-a: var(--blue); --tone-b: var(--teal);">
+        <span class="decor-blob decor-blob-a"></span>
+        <span class="decor-blob decor-blob-b"></span>
+        <svg class="decor-pattern"><rect width="100%" height="100%" fill="url(#tech-pattern)"></rect></svg>
+      </div>
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="section-eyebrow">Projects</span>
@@ -377,7 +441,7 @@
               <li>Apply reverse engineering on proprietary vehicle protocols.</li>
             </ul>
             <div class="project-tags">
-              <span class="badge">FMS</span><span class="badge">BCM</span></span><span class="badge">UDS</span><span class="badge">CANoe</span>
+              <span class="badge">FMS</span><span class="badge">BCM</span><span class="badge">UDS</span><span class="badge">CANoe</span>
             </div>
           </article>
 
@@ -481,6 +545,11 @@
 
     <!-- ============ SKILLS ============ -->
     <section id="skills" class="section">
+      <div class="section-decor" aria-hidden="true" style="--tone-a: var(--violet); --tone-b: var(--blue);">
+        <span class="decor-blob decor-blob-a"></span>
+        <span class="decor-blob decor-blob-b"></span>
+        <svg class="decor-pattern"><rect width="100%" height="100%" fill="url(#tech-pattern)"></rect></svg>
+      </div>
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="section-eyebrow">Skills</span>
@@ -504,7 +573,7 @@
         <div class="skills-category" data-reveal>
           <h3>Software &amp; AI</h3>
           <div class="skills-chips">
-            <span class="badge badge-teal">Python</span><span class="badge badge-teal">MATLAB &amp; Simulink</span><span class="badge badge-teal">AI Agents</span><span class="badge badge-teal">LLM Integration</span><span class="badge badge-teal">Google AI Essentials</span>
+            <span class="badge badge-violet">Python</span><span class="badge badge-violet">MATLAB &amp; Simulink</span><span class="badge badge-violet">AI Agents</span><span class="badge badge-violet">LLM Integration</span><span class="badge badge-violet">Google AI Essentials</span>
           </div>
         </div>
 
@@ -518,7 +587,7 @@
         <div class="skills-category" data-reveal>
           <h3>Tools &amp; Platforms</h3>
           <div class="skills-chips">
-            <span class="badge badge-teal">Git / GitHub</span><span class="badge badge-teal">Visual Studio</span><span class="badge badge-teal">QNX</span>
+            <span class="badge badge-blue">Git / GitHub</span><span class="badge badge-blue">Visual Studio</span><span class="badge badge-blue">QNX</span>
           </div>
         </div>
       </div>
@@ -526,6 +595,11 @@
 
     <!-- ============ CERTIFICATIONS ============ -->
     <section id="certifications" class="section">
+      <div class="section-decor" aria-hidden="true" style="--tone-a: var(--teal); --tone-b: var(--blue);">
+        <span class="decor-blob decor-blob-a"></span>
+        <span class="decor-blob decor-blob-b"></span>
+        <svg class="decor-pattern"><rect width="100%" height="100%" fill="url(#tech-pattern)"></rect></svg>
+      </div>
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="section-eyebrow">Certifications</span>
@@ -596,6 +670,11 @@
 
     <!-- ============ EDUCATION ============ -->
     <section id="education" class="section">
+      <div class="section-decor" aria-hidden="true" style="--tone-a: var(--amber); --tone-b: var(--violet);">
+        <span class="decor-blob decor-blob-a"></span>
+        <span class="decor-blob decor-blob-b"></span>
+        <svg class="decor-pattern"><rect width="100%" height="100%" fill="url(#tech-pattern)"></rect></svg>
+      </div>
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="section-eyebrow">Education</span>
@@ -621,8 +700,11 @@
     <section id="contact" class="section">
       <div class="container">
         <div class="card contact-panel" data-reveal>
-          <div class="blob blob-teal" aria-hidden="true"></div>
-          <div class="blob blob-amber" aria-hidden="true"></div>
+          <div class="section-decor" aria-hidden="true" style="--tone-a: var(--blue); --tone-b: var(--violet);">
+            <span class="decor-blob decor-blob-a"></span>
+            <span class="decor-blob decor-blob-b"></span>
+            <svg class="decor-pattern"><rect width="100%" height="100%" fill="url(#tech-pattern)"></rect></svg>
+          </div>
 
           <div class="section-heading center" style="position:relative">
             <span class="section-eyebrow">Get in Touch</span>
@@ -671,7 +753,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p class="footer-copy">© <span id="year"></span> Mostafa Tobar </p>
+      <p class="footer-copy">© <span id="year"></span> Mostafa Tobar</p>
       <div class="footer-social">
         <a href="mailto:mostafatobar3344@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail"></use></svg></a>
         <a href="https://github.com/mostafatobar22" target="_blank" rel="noreferrer" aria-label="GitHub"><svg class="icon"><use href="#i-github"></use></svg></a>
